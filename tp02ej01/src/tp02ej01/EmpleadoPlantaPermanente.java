@@ -48,7 +48,6 @@ public class EmpleadoPlantaPermanente extends Empleado {
 		return calcularSueldoBruto() * 0.15;
 	}
 
-
 	private double retencionPorObraSocial() {
 		return deduccionDeObraSocial() + deduccionPorHijo();
 	}

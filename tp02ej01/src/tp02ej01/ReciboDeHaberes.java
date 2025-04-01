@@ -37,11 +37,13 @@ public class ReciboDeHaberes {
 	}
 	
 	public void liquidarSueldo() {
+		System.out.println("/****************************/");
 		System.out.println("Empleado: " + obtenerNombreDelEmpleado());
 		System.out.println("Dirección: " + obtenerDireccionDelEmpleado());
 		System.out.println("Fecha: " + obtenerFechaDeEmision());
 		System.out.println("Sueldo bruto: $" + obtenerSueldoBruto());
 		System.out.println("Retenciones: $" + obtenerRetenciones());
 		System.out.println("Sueldo neto: $" + obtenerSueldoNeto());
+		System.out.println("/****************************/\n");
 	}
 }
