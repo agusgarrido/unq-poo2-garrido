@@ -3,6 +3,10 @@ package tp02ej01;
 import java.time.LocalDate;
 
 public class ReciboDeHaberes {
+	
+	// Para hacer el desgloce, armar una clase Concepto con nombre y monto
+	// Hacer un arraylist de conceptos
+	// VER BIEN LA IMPLEMENTACION
 
 	private LocalDate fechaDeEmision;
 	private Empleado empleado;

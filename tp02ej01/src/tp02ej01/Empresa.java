@@ -14,7 +14,7 @@ class Empresa {
 		this.nombre = _nombre;
 		this.cuit = _cuit;
 		this.empleados = new ArrayList<>();
-		this.recibosDeHaberes = new ArrayList<>();
+		this.recibosDeHaberes = new ArrayList<ReciboDeHaberes>();
 	}
 	
 	public double calcularTotalSueldosNeto() { return empleados.stream().mapToDouble(Empleado::calcularSueldoNeto).sum();}
