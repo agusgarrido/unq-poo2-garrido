@@ -9,9 +9,15 @@ public class ProductoPrimeraNecesidadTest {
 
 	private ProductoPrimeraNecesidad leche;
 	
-	@BeforeEach
+	/*@BeforeEach
 	public void setUp() {
 		leche = new ProductoPrimeraNecesidad("Leche", 8, false);
+	}*/
+	
+	// Variación para Punto 2
+	@BeforeEach
+	public void setUp() {
+		leche = new ProductoPrimeraNecesidad("Leche", 8, false, 10);
 	}
 	
 	@Test
