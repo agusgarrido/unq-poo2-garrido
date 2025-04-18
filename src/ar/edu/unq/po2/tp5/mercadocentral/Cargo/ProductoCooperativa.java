@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp5.mercadocentral;
+package ar.edu.unq.po2.tp5.mercadocentral.Cargo;
 
 public class ProductoCooperativa extends Producto{
 	public ProductoCooperativa(double precioBase, int stock) {
@@ -6,11 +6,11 @@ public class ProductoCooperativa extends Producto{
 	}
 	
 	private double descuentoIVA() {
-		return super.getPrecio() * 0.10;
+		return super.getValor() * 0.10;
 	}
 	
 	@Override
-	public double getPrecio() {
-		return super.getPrecio() - descuentoIVA();
+	public double getValor() {
+		return super.getValor() - descuentoIVA();
 	}
 }

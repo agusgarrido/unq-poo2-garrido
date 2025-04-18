@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import ar.edu.unq.po2.tp5.mercadocentral.Cargo.ProductoCooperativa;
+import ar.edu.unq.po2.tp5.mercadocentral.Cargo.ProductoEmpresaTradicional;
+
 class ProductoTestCase {
 	ProductoEmpresaTradicional leche;
 	ProductoCooperativa harina;
@@ -20,16 +23,16 @@ class ProductoTestCase {
 	@Test
 	void testStock() {
 		assertEquals(100, leche.getStock());
-		leche.comprar();
-		leche.comprar();
+		leche.liquidar();
+		leche.liquidar();
 		assertNotEquals(100, leche.getStock());
 		assertEquals(98, leche.getStock());
 	}
 	
 	@Test
 	void testDescuentoCooperativa() {
-		assertNotEquals(800, harina.getPrecio());
-		assertEquals(720, harina.getPrecio(), 0);
+		assertNotEquals(800, harina.getValor());
+		assertEquals(720, harina.getValor(), 0);
 	}
 
 }

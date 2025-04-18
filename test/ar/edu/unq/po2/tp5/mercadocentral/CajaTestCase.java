@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import ar.edu.unq.po2.tp5.mercadocentral.Cargo.ProductoCooperativa;
+import ar.edu.unq.po2.tp5.mercadocentral.Cargo.ProductoEmpresaTradicional;
+
 class CajaTestCase {
 	ProductoEmpresaTradicional leche;
 	ProductoCooperativa harina;
@@ -21,10 +24,10 @@ class CajaTestCase {
 	
 	@Test
 	void testComprarProductos() {
-		supermercado.comprarProducto(azucar);
-		supermercado.comprarProducto(harina);
+		supermercado.registrarPago(azucar);
+		supermercado.registrarPago(harina);
 		assertEquals(1485, supermercado.getMontoTotal());
-		supermercado.comprarProducto(leche);
+		supermercado.registrarPago(leche);
 		assertEquals(3385, supermercado.getMontoTotal());
 	}
 

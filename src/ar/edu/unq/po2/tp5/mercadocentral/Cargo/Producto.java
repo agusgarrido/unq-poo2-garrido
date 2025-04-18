@@ -1,6 +1,6 @@
-package ar.edu.unq.po2.tp5.mercadocentral;
+package ar.edu.unq.po2.tp5.mercadocentral.Cargo;
 
-public class Producto {
+public class Producto implements Cargo{
 	private double precioBase;
 	private int stock;
 	
@@ -9,7 +9,7 @@ public class Producto {
 		this.stock = stock;
 	}
 	
-	public double getPrecio() {
+	public double getValor() {
 		return this.precioBase;
 	}
 	
@@ -25,7 +25,7 @@ public class Producto {
 		this.stock = stock;
 	}
 	
-	public void comprar() {
+	public void liquidar() {
 		if (this.hayStock()) { this.setStock(this.getStock() - 1); }
 	}
 }
