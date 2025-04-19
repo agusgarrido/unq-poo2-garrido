@@ -1,6 +1,8 @@
-package tp02ej01;
+package ar.edu.unq.po2.tp2;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  * IMPORTANTE
@@ -47,5 +49,15 @@ public class EmpleadoPlantaTemporaria extends Empleado {
 
 	private double retencionPorObraSocial() {
 		return calcularSueldoBruto() * 0.10 + descuentoPorMayorDe50();
+	}
+	
+	public List<Concepto> desgloceDeSueldo(){
+		List<Concepto> conceptos = new ArrayList<Concepto>();
+		conceptos.add(new Concepto("Sueldo básico", getSueldoBasico()));
+		conceptos.add(new Concepto("Retención por horas extras", retencionPorHorasExtra()));
+		conceptos.add(new Concepto("Retención Obra Social", retencionPorObraSocial()));
+		conceptos.add(new Concepto("Aportes jubilatorios", retencionPorAportesJubilatorios()));
+		
+		return conceptos;
 	}
 }

@@ -1,4 +1,4 @@
-package tp02ej01;
+package ar.edu.unq.po2.tp2;
 
 import java.time.LocalDate;
 
@@ -11,16 +11,9 @@ public class Main {
 		empresaDePrueba.agregarEmpleado(empleadoPermanente);
 		empresaDePrueba.agregarEmpleado(empleadoTemporal);
 		empresaDePrueba.agregarEmpleado(empleadoContratado);
-		
+
 		System.out.println("El calculo total de sueldos neto es de $" + empresaDePrueba.calcularTotalSueldosNeto() + "\n");
-		
-		ReciboDeHaberes reciboDeHaberesPermanente = new ReciboDeHaberes(LocalDate.now(), empleadoPermanente);
-		System.out.println("La liquidación de sueldo del empleado " + empleadoPermanente.obtenerNombre() + ", correspondiente a la fecha " + reciboDeHaberesPermanente.obtenerFechaDeEmision() +" es: ");
-		reciboDeHaberesPermanente.liquidarSueldo();
-		
-		ReciboDeHaberes reciboDeHaberesContratado = new ReciboDeHaberes(LocalDate.now(), empleadoContratado);
-		System.out.println("La liquidación de sueldo del empleado " + empleadoContratado.obtenerNombre() + ", correspondiente a la fecha " + reciboDeHaberesContratado.obtenerFechaDeEmision() +" es: ");
-		reciboDeHaberesContratado.liquidarSueldo();
-		
+
+		empresaDePrueba.generarRecibosDeHaberes();
 	}
 }

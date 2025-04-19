@@ -1,7 +1,8 @@
-package tp02ej01;
+package ar.edu.unq.po2.tp2;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.List;
 
 abstract class Empleado {
 
@@ -10,7 +11,7 @@ abstract class Empleado {
 	private String estadoCivil;
 	private LocalDate fechaNacimiento;
 	private Double sueldoBasico;
-	
+
 	public Empleado(String nombre, String direccion, 
 			String estadoCivil, LocalDate fechaNacimiento, Double sueldoBasico) {
 		this.nombre = nombre;
@@ -19,32 +20,34 @@ abstract class Empleado {
 		this.fechaNacimiento = fechaNacimiento;
 		this.sueldoBasico = sueldoBasico;
 	}
-	
+
 	public int calcularEdad() {
 		return Period.between(this.fechaNacimiento, LocalDate.now()).getYears();
 	}
-	
-	protected double getSueldoBasico() {
-		return sueldoBasico;
+
+	public double getSueldoBasico() {
+		return this.sueldoBasico;
 	}
-	
+
 	protected String getEstadoCivil() {
-	    return estadoCivil;
+		return this.estadoCivil;
 	}
-	
+
 	abstract double calcularSueldoBruto();
-	
+
 	abstract double calcularRetenciones();
-	
+
 	public double calcularSueldoNeto() {
 		return calcularSueldoBruto() - calcularRetenciones();
 	}
-	
+
 	public String obtenerNombre() {
-		return nombre;
+		return this.nombre;
 	}
-	
+
 	public String obtenerDireccion() {
-		return direccion;
+		return this.direccion;
 	}
+
+	abstract List<Concepto> desgloceDeSueldo();
 }
