@@ -26,6 +26,7 @@ public class EmpleadoContratado extends Empleado{
 		return 50;
 	}
 
+	@Override
 	public List<Concepto> desgloceDeSueldo(){
 		List<Concepto> conceptos = new ArrayList<Concepto>();
 		conceptos.add(new Concepto("Sueldo básico", getSueldoBasico()));

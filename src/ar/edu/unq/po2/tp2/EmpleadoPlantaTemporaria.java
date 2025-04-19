@@ -51,6 +51,7 @@ public class EmpleadoPlantaTemporaria extends Empleado {
 		return calcularSueldoBruto() * 0.10 + descuentoPorMayorDe50();
 	}
 	
+	@Override
 	public List<Concepto> desgloceDeSueldo(){
 		List<Concepto> conceptos = new ArrayList<Concepto>();
 		conceptos.add(new Concepto("Sueldo básico", getSueldoBasico()));

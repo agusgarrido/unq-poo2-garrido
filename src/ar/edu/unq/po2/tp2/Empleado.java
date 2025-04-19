@@ -10,7 +10,7 @@ abstract class Empleado {
 	private String direccion;
 	private String estadoCivil;
 	private LocalDate fechaNacimiento;
-	private Double sueldoBasico;
+	private double sueldoBasico;
 
 	public Empleado(String nombre, String direccion, 
 			String estadoCivil, LocalDate fechaNacimiento, Double sueldoBasico) {

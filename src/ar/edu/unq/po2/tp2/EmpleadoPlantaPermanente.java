@@ -42,11 +42,11 @@ public class EmpleadoPlantaPermanente extends Empleado {
 		return esCasado() ? 100 : 0;
 	}
 
-	public double getSalarioFamiliar() {
+	private double getSalarioFamiliar() {
 		return asignacionPorConyuge() + asignacionPorHijo();
 	}
 
-	protected boolean esCasado() {
+	private boolean esCasado() {
 		return getEstadoCivil().toUpperCase().equals("CASADO");
 	}
 
@@ -66,6 +66,7 @@ public class EmpleadoPlantaPermanente extends Empleado {
 		return calcularSueldoBruto() * 0.10;
 	}
 
+	@Override
 	public List<Concepto> desgloceDeSueldo(){
 		List<Concepto> conceptos = new ArrayList<Concepto>();
 		conceptos.add(new Concepto("Sueldo básico", getSueldoBasico()));
