@@ -35,6 +35,6 @@ public abstract class SolicitudCredito {
 
 	public abstract boolean esAceptable();
 	public boolean ingresosMensualesValidosParaCuota() {
-		return this.getMonto() <= getCliente().getSueldoNetoMensual() * getPorcentajeLimiteCuota();
+		return this.montoMensual() <= getCliente().getSueldoNetoMensual() * getPorcentajeLimiteCuota();
 	}
 }
