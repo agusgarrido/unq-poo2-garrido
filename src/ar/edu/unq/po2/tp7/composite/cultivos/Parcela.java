@@ -11,7 +11,7 @@ public class Parcela implements Cultivo{
 	}
 
 	public int getValor() {
-		return cultivos.stream().mapToInt(cultivo -> cultivo.getValor()).sum();
+		return cultivos.stream().mapToInt(cultivo -> cultivo.getValor()/4).sum();
 	}
 
 	public void agregarCultivo(Cultivo cultivo) {
