@@ -5,7 +5,7 @@ import java.util.List;
 
 public abstract class Filtro {
 	
-	public List<WikipediaPage> getSimilarPages(WikipediaPage page,
+	public final List<WikipediaPage> getSimilarPages(WikipediaPage page,
 					List<WikipediaPage> wikipedia){
 		
 		List<WikipediaPage> similares = new ArrayList<WikipediaPage>();

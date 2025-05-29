@@ -4,8 +4,9 @@ public abstract class Empleado {
 
 	public Empleado() {}
 	
-	public double sueldo() {
-		return this.getSueldoBruto() - this.descuentos(getSueldoBruto());
+	public final double sueldo() {
+		double sueldoBruto = this.getIngresos() + this.getBonosExtra();
+		return sueldoBruto - this.descuentos(sueldoBruto);
 	}
 	
 	private double descuentos(double sueldoBruto) {
@@ -15,7 +16,9 @@ public abstract class Empleado {
 	public abstract double getBonosExtra();
 	public abstract double getIngresos();
 	
-	public double getSueldoBruto() {
+	/*public double getSueldoBruto() {
 		return this.getIngresos() + this.getBonosExtra();
-	}
+	} -> Complica la lógica de forma innecesaria */
 }
+
+/*FINAL AL MÉTODO*/
